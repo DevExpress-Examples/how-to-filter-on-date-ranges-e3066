@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="FilterOnDateRanges.MainPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid" 
+             xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+             xmlns:local="clr-namespace:FilterOnDateRanges">
+
+    <UserControl.Resources>
+        <DataTemplate x:Key="columnFilterPopupTemplate">
+            <local:DateEditFilter Margin="5,5" 
+                    Filter="{Binding Path=CustomColumnFilter, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}">
+                <StackPanel>
+                    <TextBlock Text="From:" />
+                    <dxe:DateEdit x:Name="PART_DateEditFrom" Width="100" />
+                    <TextBlock Text="To:" />
+                    <dxe:DateEdit x:Name="PART_DateEditTo" Width="100" />
+                </StackPanel>
+            </local:DateEditFilter>
+        </DataTemplate>
+    </UserControl.Resources>
+
+    <Grid>
+        <dxg:GridControl x:Name="grid">
+            <dxg:GridControl.Columns>
+                <dxg:GridColumn FieldName="CurDate" Header="Date" FilterPopupMode="Custom" 
+                        CustomColumnFilterPopupTemplate="{StaticResource columnFilterPopupTemplate}" />
+            </dxg:GridControl.Columns>
+        </dxg:GridControl>
+    </Grid>
+</UserControl>
