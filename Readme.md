@@ -1,7 +1,7 @@
 <!-- default file list -->
 *Files to look at*:
 
-* [MainPage.xaml](./CS/FilterOnDateRanges/MainPage.xaml) (VB: [MainPage.xaml.vb](./VB/FilterOnDateRanges/MainPage.xaml.vb))
+* [MainPage.xaml](./CS/FilterOnDateRanges/MainPage.xaml) (VB: [MainPage.xaml](./VB/FilterOnDateRanges/MainPage.xaml))
 * [MainPage.xaml.cs](./CS/FilterOnDateRanges/MainPage.xaml.cs) (VB: [MainPage.xaml.vb](./VB/FilterOnDateRanges/MainPage.xaml.vb))
 <!-- default file list end -->
 # How to filter on date ranges
